@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Dancing+Script:wght@400..700&family=Marck+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --primary-black:#333;
+    --primary-black:#111;
     --primary-white:#fff;
 }
 
@@ -13,11 +14,16 @@
     text-decoration: none;
     font-family: 'Montserrat';
 }
+body{
+    display: flex;
+    flex-direction: column;
+}
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     justify-content: space-around;
+
 }
 .Search{
     display: flex;
@@ -40,6 +46,7 @@ nav{
 }
 .Links{
     display: flex;
+    align-items: center;
     gap:2rem;
 }
 .Links a{
@@ -82,11 +89,56 @@ nav{
     gap:.25rem;
     color:var(--primary-white)
 }
+.Hero{
+    background-image: url(./assets/Hero.jpg);
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    gap:1rem;
+    color:var(--primary-white);
+    justify-content: center;
+    align-items: center;
+    height:85vh;
+    background-attachment: fixed;
+}
+.Hero span:nth-child(2){
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+.Hero button{
+    width:fit-content;
+    padding:.5rem 1rem;
+    border:solid 1px #fff;
+    background:none;
+    color:#fff;
+    transition: all 350ms;
+    cursor:pointer;
+}
+.Hero button:hover{
+    scale:1.25;
+    background-color: #000;
+}
+.Model{
+    width:15%;
+    scale:1.25;
+    transform: translateY(-3rem);
+    filter: drop-shadow(-10px 3px 10px #333333);
+    animation:Bounce 1500ms ease forwards infinite alternate-reverse;
+}
+@keyframes Bounce{
+    from{}
+    to{
+        transform: translateY(-1rem);
+    }
+}
 .Feat-container{
     padding:1.5rem;
     display: flex;
     justify-content: center;
     gap:1rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #33333350;
 }
 .Feat{
     display: flex;
@@ -94,10 +146,11 @@ nav{
     align-items: center;
     justify-content: center;
     gap:1rem;
-    padding:5rem;
-    width:25%;
+    padding:3rem;
+    width:20%;
     box-shadow: 0 0 2px #33333350;
     transition:all 1000ms;
+    background-color: #ffc0cb50;
     cursor:pointer;
 }
 .Feat:hover{
@@ -119,8 +172,10 @@ nav{
     background-position: center;
     display: flex;
     justify-content: space-around;
-    border: solid 2px #33333320;
+    align-items: center;
+    border-bottom: solid 1px #00000050;
 }
+
 .Featured_inner{
     display: flex;
     flex-direction: column;
@@ -128,19 +183,24 @@ nav{
     gap:2rem;
     align-items: center;
     padding:1rem 0;
+    width:40%;
 }
 .Price{
     background-color: var(--primary-black);
     color:var(--primary-white);
-    width:50%;
+    width:100%;
     display: flex;
     flex-direction: column;
     gap:.5rem;
     padding:2rem;
+    box-shadow: 0 5px 15px #000;
+}
+.Price span:first-child{
+    font-size: .85em;
 }
 .Price span:nth-child(2){
     opacity:.5;
-    font-size: 3em;
+    font-size: 2em;
 }
 .Price span:nth-child(3){
     font-weight: bolder;
@@ -164,11 +224,13 @@ nav{
 .Timeline{
     display: flex;
     gap:2rem;
-    background-color: #fff;
-    border:solid 1px #33333350;
-    width:50%;
+    color:#fff;
+    border:solid 1px #000;
+    width:100%;
     justify-content: center;
     padding:1rem;
+    background-color: #000;
+    box-shadow: 0 5px 15px #000;
 }
 .Time{
     display: flex;
@@ -182,4 +244,118 @@ nav{
 }
 .Time span:nth-child(2){
     opacity:.5;
+}
+.Products{
+    padding:2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.Product_head{
+    display: flex;
+    flex-direction: column;
+    gap:.75rem;
+    align-items: center;
+}
+
+.Product_head span:first-child{
+    font-size: 2em;
+    font-weight: bolder;
+}
+.Product_head span:nth-child(2){
+    font-family: 'Arimo';
+    font-size: 1em;
+    opacity:.75;
+}
+.Product_head img{
+    width:10%;
+}
+.Slider{
+    display: flex;
+    width:90%;
+    margin:0 auto;
+    gap:1rem;
+}
+.Product_card{
+    width:20%;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+    transition:all 350ms;
+    cursor:pointer;
+}
+
+.Product_card:hover{
+    scale:1.05;
+    box-shadow: 0 0 5px #33333375;
+}
+.Product_pic{
+    height:20rem;
+}
+.Product_name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.Product_name span{
+    font-weight: bold;
+}
+.Product_name img{
+    width:1.75rem;
+    border:solid .25px #333;
+    padding:.25rem;
+    background-color: #333;
+}
+.Desc{
+    opacity:.75;
+    font-family: 'Arimo';
+}
+.Arrival{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+}
+.Arrival1{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    width:45%;
+}
+.Arrival_details{
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+}
+.Arrival_buttons{
+    display: flex;
+    gap:1rem;
+}
+.Arrival_pic{
+    height: 100%;
+    width:30vh;
+}
+.Arrival_buttons img{
+    width:2rem;
+    padding:.5rem;
+    border:solid 1px #333;
+}
+.Arrival_details span:first-child{
+    padding:.5rem;
+    font-size: .85em;
+    background-color: #333;
+    color:#fff;
+}
+.Arrival_details span:nth-child(2){
+    font-size: 2em;
+    color:#333;
+}
+.Arrival_details span:nth-child(3){
+    font-weight: bolder;
+    font-size: 1.5em;
+    color:#333;
+}
+.Arrival_details span:nth-child(4){
+    opacity:.75;
 }
