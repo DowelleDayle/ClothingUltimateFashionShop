@@ -445,6 +445,7 @@ nav{
     width: 100%;
     height: 100%;
     background-image: url(./assets/Client.jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     filter: blur(2px);
@@ -456,7 +457,8 @@ nav{
     width:25%;
     transition: all 350ms;
     overflow: hidden;
-    border-radius: 100px 0
+    border-radius: 100px 0;
+    border:solid 5px #fff;
 }
 .Clients img:hover{
     scale:1.05;
@@ -511,10 +513,17 @@ nav{
     
 }
 .Blog{
-    width:22%;
+    width:20%;
     display: flex;
     flex-direction: column;
     gap:.5rem;
+    border:solid 2px #33333325;
+    padding:1.25rem;
+    cursor:pointer;
+    transition: all 350ms;
+}
+.Blog:hover{
+    scale:1.025;
 }
 .Blog span:nth-child(2){
     font-size: 1em;
@@ -522,4 +531,135 @@ nav{
 }
 .Blog span:nth-child(3){
     font-size: .85em;
+}
+.Read{
+    font-size: .85em;
+    text-decoration:underline;
+    color:#8f6e02;
+}
+footer{
+    color:#fff;
+}
+.Footer1{
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding:3.5rem;
+}
+.Footer2{
+    background-color: #000;
+    color:#fff;
+    padding:1rem 5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Cards{
+    display: flex;
+    gap:.5rem;
+    width: 20% ;
+}
+.Cards img{
+    height: 100%;
+    width:15%;
+}
+.Contact{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    width:25%;
+}
+.Contact_inner{
+    display: flex;
+    gap:.5rem;
+    font-size: .85em;
+    align-items: center;
+}
+.Contact_inner img{
+    width:2rem;
+    padding:.5rem;
+    border:solid 1px #fff;
+}
+.Information{
+    display: flex;
+    flex-direction:column;
+    gap:2rem;
+    width:15%;
+}
+.Information_inner{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    font-size: .85em;
+}
+.Instagram{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    width:30%;
+}
+.Instagram_inner{
+    gap:.25rem;
+    display:flex;
+    flex-wrap: wrap;
+}
+.Instagram_inner img {
+    width: 25%;
+    filter: grayscale(100%); 
+    transition: all 350ms; 
+    cursor:pointer;
+}
+
+.Instagram_inner img:hover {
+    filter: grayscale(0%);
+    scale:1.05;
+}
+.Email{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    width:30%;
+}
+.Email_input{
+    display: flex;
+}
+.Email_input input{
+    background-color: #000;
+    border:none;
+    outline:none;
+    color:#ffffff;
+    height:2rem;
+    padding:.5rem;
+}
+.Email_inner{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+}
+.Email_input img{
+    width:2rem;
+    padding:.5rem;
+    border-left: none;
+    background-color:#494949;
+    cursor:pointer;
+    transition:all 350ms;
+}
+.Email_input img:hover{
+    scale:1.05;
+}
+
+.Social{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.Social_inner{
+    display: flex;
+    gap:.5rem;
+}
+
+.Social_inner img{
+    width:2rem;
+    padding:.5rem;
+    background-color: #494949;
 }
